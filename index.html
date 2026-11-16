@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ИСКРА — этикетки комбучи</title>
+<meta name="description" content="Пример концепции и этикеток для линейки комбучи из трёх вкусов. Бренд вымышленный.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3f1ec; --ink:#151513; --muted:#5d5b55; --line:#d9d5cc;
+    --lime:#c7ff38; --lime-ink:#0f4419; --pink:#ff2e9e; --pink-ink:#3e0832; --sun:#ffcc1f; --sun-ink:#5d1d00;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 Manrope,system-ui,sans-serif}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;letter-spacing:-.02em;line-height:1.05;margin:0}
+  .tag{display:inline-block;font:800 12px/1 Manrope;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+  /* hero */
+  header{padding:28px 0 0}
+  .top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+  .note{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+  .hero{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;padding:48px 0 0}
+  .hero h1{font-weight:900;font-size:clamp(56px,11vw,132px)}
+  .hero p.lead{font-size:clamp(18px,2vw,21px);max-width:30em;margin:22px 0 0;color:#2b2a27}
+  .photo{margin:0}
+  .photo img{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 24px 50px -24px rgba(0,0,0,.35)}
+  .photo figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+
+  section.wrap{padding-top:88px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  h2{font-weight:900;font-size:clamp(30px,4.6vw,52px)}
+  .ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .idea{background:#fff;border-radius:18px;padding:24px;border:1px solid var(--line)}
+  .idea b{display:block;font-family:Unbounded;font-weight:600;font-size:17px;margin:14px 0 8px;letter-spacing:-.01em}
+  .idea p{margin:0;color:#3a3935;font-size:15.5px}
+  .dot{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:900 15px Unbounded}
+
+  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .sw{border-radius:18px;padding:22px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+  .sw .n{font:900 44px/1 Unbounded}
+  .sw .t{font:600 15px/1.3 Unbounded}
+  .sw small{display:block;font:600 12.5px/1.5 Manrope;opacity:.85;margin-top:8px}
+
+  .flat{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+  .flat img{width:100%;height:auto;display:block;border-radius:4px}
+  .flathead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+  .flathead h3{font-weight:600;font-size:18px}
+  .toggle{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:600;font-size:14px;user-select:none}
+  .toggle input{width:18px;height:18px;accent-color:var(--ink)}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:12px}
+  .legend i{display:inline-block;width:22px;height:0;border-top:2px solid #ff2a2a;vertical-align:middle;margin-right:6px}
+  .legend i.s{border-top:2px dashed #1a7bff}
+  .panels{display:grid;grid-template-columns:55fr 70fr 55fr;margin-top:6px;font-size:12.5px;color:var(--muted);text-align:center}
+  .panels span{border-top:1px solid var(--line);padding-top:6px}
+
+  .checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+  .checks li{padding-left:34px;position:relative}
+  .checks li::before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--ink);
+    -webkit-mask:radial-gradient(circle,#000 0 100%);}
+  .checks li::after{content:"";position:absolute;left:6px;top:8px;width:8px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+  .dl{display:grid;gap:12px;margin-top:26px}
+  .dl a{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;transition:border-color .2s}
+  .dl a:hover{border-color:var(--ink)}
+  .dl a span{font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}
+  footer{padding:90px 0 40px;color:var(--muted);font-size:14px}
+  footer .wrap{border-top:1px solid var(--line);padding-top:22px}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;gap:10px;padding-top:30px}
+    .grid2,.ideas,.swatches{grid-template-columns:1fr}
+    section.wrap{padding-top:64px}
+    .panels{font-size:10.5px}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="top">
+    <span class="tag">Пример концепции · этикетки 180×75 мм</span>
+    <span class="note">Бренд «ИСКРА» вымышленный — сделан для отклика на Kwork</span>
+  </div>
+  <div class="hero">
+    <div>
+      <h1>ИСКРА</h1>
+      <p class="lead">Линейка из трёх вкусов комбучи без «эко-шаблона»: никаких листьев, крафта и рукописных шрифтов. Смелая типографика, чистый цвет на каждый вкус и пузырьки — как газ, поднимающийся со дна бутылки.</p>
+    </div>
+    <figure class="photo"><img src="files/ISKRA_butylki_foto_1200.jpg" srcset="files/ISKRA_butylki_foto_1200.jpg 1200w, files/ISKRA_butylki_foto.jpg 1536w" sizes="(max-width:860px) 100vw, 640px" width="1200" height="800" alt="Три бутылки комбучи ИСКРА 330 мл с этикетками трёх вкусов"><figcaption>Визуализация бутылок 330 мл</figcaption></figure>
+  </div>
+</header>
+
+<section class="wrap">
+  <span class="tag">Идея</span>
+  <h2 style="margin-top:12px">Натурально,<br>но не скучно</h2>
+  <div class="ideas">
+    <div class="idea"><div class="dot" style="background:var(--pink);color:var(--pink-ink)">●</div>
+      <b>Пузырьки вместо листьев</b><p>Растр из кружков растёт снизу вверх и тает — это живое брожение и газ напитка. Натуральность считывается без банальных картинок.</p></div>
+    <div class="idea"><div class="dot" style="background:var(--lime);color:var(--lime-ink)">02</div>
+      <b>Номер — самый большой пузырь</b><p>01, 02, 03 легко запомнить: «возьму розовую, вторую». Удобно расширять линейку новыми вкусами.</p></div>
+    <div class="idea"><div class="dot" style="background:var(--sun);color:var(--sun-ink)">↕</div>
+      <b>Узнаётся с любой стороны</b><p>Вертикальная надпись KOMBUCHA на боковой части — бутылку узнают, даже если на полке она стоит боком.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <span class="tag">Цвет на каждый вкус</span>
+  <h2 style="margin-top:12px">Один стиль — три характера</h2>
+  <div class="swatches">
+    <div class="sw" style="background:var(--lime);color:var(--lime-ink)"><div class="n">01</div><div><div class="t">Классическая<br>зелёный чай</div><small>Фон C22 M0 Y78 K0 · краска C85 M30 Y80 K62</small></div></div>
+    <div class="sw" style="background:var(--pink);color:var(--pink-ink)"><div class="n">02</div><div><div class="t">Малина<br>и гибискус</div><small>Фон C0 M82 Y38 K0 · краска C35 M95 Y50 K68</small></div></div>
+    <div class="sw" style="background:var(--sun);color:var(--sun-ink)"><div class="n">03</div><div><div class="t">Имбирь<br>и лимон</div><small>Фон C0 M20 Y88 K0 · краска C20 M78 Y100 K58</small></div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <span class="tag">Развёртки</span>
+  <h2 style="margin-top:12px">Этикетка целиком</h2>
+  <p style="max-width:44em;color:#3a3935">Обёрточная этикетка вокруг бутылки: слева — состав и факты, по центру — лицевая сторона, справа — поле под дату розлива и штрихкод. Включите линии, чтобы увидеть рез и безопасную зону.</p>
+  <div id="flats"></div>
+</section>
+
+<section class="wrap grid2">
+  <div>
+    <span class="tag">Подготовка к печати</span>
+    <h2 style="margin-top:12px">Готово для типографии</h2>
+    <ul class="checks">
+      <li>Размер в обрез 180×75 мм, вылеты по 2 мм со всех сторон, в файле заданы линии реза.</li>
+      <li>Цвета в CMYK — в тех красках, которыми печатает типография.</li>
+      <li>Весь текст переведён в кривые: шрифты типографии не нужны, ничего не «съедет».</li>
+      <li>Важное держится в 3 мм от края реза; мелкий текст не меньше 6 pt.</li>
+      <li>Штрихкод EAN-13 — векторный, чёрный на белой подложке; все три проверены сканером.</li>
+      <li>Белое окно под дату розлива — для маркировки на линии.</li>
+    </ul>
+    <p style="color:var(--muted);font-size:14.5px;margin-top:22px">Размер взят типовой для бутылки 330 мл. В работе подгоняю его под вашу бутылку и техтребования типографии.</p>
+  </div>
+  <div>
+    <span class="tag">Файлы</span>
+    <div class="dl" id="dl"></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Пример выполнен для отклика на заказ. Бренд, тексты, состав и штрихкоды вымышленные.</div></footer>
+
+<script>
+const SKU=[
+  {slug:"01_klassicheskaya",name:"01 · Классическая, зелёный чай"},
+  {slug:"02_malina_gibiskus",name:"02 · Малина и гибискус"},
+  {slug:"03_imbir_limon",name:"03 · Имбирь и лимон"}];
+const f=s=>"files/ISKRA_"+s+"_180x75";
+
+document.getElementById("flats").innerHTML=SKU.map((s,i)=>`
+<div class="flat">
+  <div class="flathead"><h3>${s.name}</h3>
+    <label class="toggle"><input type="checkbox" data-i="${i}"> Показать рез и безопасную зону</label></div>
+  <img id="img${i}" src="${f(s.slug)}.svg" alt="Развёртка этикетки: ${s.name}" width="1840" height="790" loading="lazy">
+  <div class="panels"><span>бок: состав</span><span>лицевая сторона</span><span>бок: дата и штрихкод</span></div>
+  <div class="legend" hidden id="lg${i}"><span><i></i>линия реза (180×75 мм)</span><span><i class="s"></i>безопасная зона, 3 мм</span><span>за красной линией — вылеты 2 мм</span></div>
+</div>`).join("");
+document.querySelectorAll(".toggle input").forEach(c=>c.addEventListener("change",e=>{
+  const i=e.target.dataset.i, s=SKU[i].slug;
+  document.getElementById("img"+i).src=f(s)+(e.target.checked?"_guides":"")+".svg";
+  document.getElementById("lg"+i).hidden=!e.target.checked;
+}));
+
+document.getElementById("dl").innerHTML=SKU.map(s=>`
+  <a href="${f(s.slug)}_print.pdf" download>${s.name} — PDF для печати<span>CMYK, вылеты</span></a>
+  <a href="${f(s.slug)}_marks.pdf" download>${s.name} — PDF с метками реза<span>CMYK</span></a>`).join("")+
+  SKU.map(s=>`<a href="${f(s.slug)}.png" download>${s.name} — картинка PNG<span>просмотр</span></a>`).join("");
+</script>
+</body>
+</html>
